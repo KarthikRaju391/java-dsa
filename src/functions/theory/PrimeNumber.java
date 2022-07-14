@@ -5,10 +5,15 @@ import java.util.Scanner;
 public class PrimeNumber {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter a number: ");
+        System.out.print("Enter the starting number: ");
         int num = in.nextInt();
-        boolean res = isPrime(num);
-        System.out.println(res);
+        System.out.print("Enter the limit: ");
+        int num2 = in.nextInt();
+        for(int i = num; i < num2; i++) {
+            if(isPrime(i)){
+                System.out.println(i);
+            }
+        }
     }
     static boolean isPrime(int n) {
        if(n <= 1) {
