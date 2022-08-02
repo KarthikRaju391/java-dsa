@@ -1,4 +1,6 @@
-class Main {
+import java.util.ArrayList;
+import java.util.List;
+class KidsWithCandies {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         // initialize a new array
         int[] updatedCandies = new int[candies.length];

@@ -1,4 +1,4 @@
-class Main {
+class BuildArray {
     public int[] buildArray(int[] nums) {
        // loop through the array
        int[] updatedArr = new int[nums.length];

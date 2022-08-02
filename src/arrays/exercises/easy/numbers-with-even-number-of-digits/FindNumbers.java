@@ -1,8 +1,8 @@
-class Solution {
+class FindNumbers {
     public int findNumbers(int[] nums) {
         int count = 0;
         for(int val: nums) {
-            if(checkEven(val) == true) {
+            if(checkEven(val)) {
                 count++;
             }
         }
@@ -11,8 +11,6 @@ class Solution {
     public boolean checkEven(int num) {
         int i = 0;
         while(num != 0) {
-            int rem;
-            rem = num % 10;
             num /= 10;
             i++;
         }

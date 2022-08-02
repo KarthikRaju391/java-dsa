@@ -1,4 +1,4 @@
-class Main {
+class RunningSum {
     public int[] runningSum(int[] nums) {
         // for each element in the new array
         int[] runningArr = new int[nums.length];

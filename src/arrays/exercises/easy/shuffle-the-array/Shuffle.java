@@ -1,4 +1,4 @@
-class Main {
+class Shuffle {
     public int[] shuffle(int[] nums, int n) {
         // initialize new array of size 2n
         int [] shuffled = new int[2*n];
