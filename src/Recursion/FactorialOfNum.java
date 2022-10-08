@@ -1,6 +1,6 @@
 package Recursion;
 
-public class FibonacciSeries {
+public class FactorialOfNum {
     public static void main(String[] args) {
         int ans = fact(5);
         System.out.println(ans);

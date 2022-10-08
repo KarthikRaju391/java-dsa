@@ -1,3 +1,5 @@
+package Accenture;
+
 import java.util.Scanner;
 
 public class SumOfMultiples {

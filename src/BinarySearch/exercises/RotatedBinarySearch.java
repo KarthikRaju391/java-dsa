@@ -17,9 +17,9 @@ public class RotatedBinarySearch {
 
         if (target >= nums[0]) {
             System.out.println(binarySearch(nums, target, 0, pivot - 1));
+        } else {
+            System.out.println(binarySearch(nums, target, pivot + 1, nums.length - 1));
         }
-
-        System.out.println(binarySearch(nums, target, pivot + 1, nums.length - 1));
     }
     static int findPivot(int[] arr) {
         int start = 0;

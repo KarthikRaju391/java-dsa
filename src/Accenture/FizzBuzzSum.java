@@ -1,3 +1,5 @@
+package Accenture;
+
 public class FizzBuzzSum {
     public static void main(String[] args) {
         int res = findMaxExp(7, 12);

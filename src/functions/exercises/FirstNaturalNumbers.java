@@ -7,7 +7,7 @@ public class FirstNaturalNumbers {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter number: ");
         int num = in.nextInt();
-        int result = getFirstN(num);
+        int result = getFirstNOpt(num);
         System.out.println(result);
     }
     static int getFirstN(int n){
@@ -16,5 +16,9 @@ public class FirstNaturalNumbers {
           sum += i;
        }
        return sum;
+    }
+
+    static int getFirstNOpt(int n) {
+        return n * (n + 1) / 2;
     }
 }

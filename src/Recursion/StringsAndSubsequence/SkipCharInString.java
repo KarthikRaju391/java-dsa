@@ -1,7 +1,5 @@
 package Recursion.StringsAndSubsequence;
 
-import java.util.Objects;
-
 public class SkipCharInString {
     public static void main(String[] args) {
         String name = "fdapplet";

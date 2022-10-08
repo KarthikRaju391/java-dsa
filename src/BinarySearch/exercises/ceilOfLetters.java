@@ -3,7 +3,7 @@ package BinarySearch.exercises;
 public class ceilOfLetters {
     public static void main(String[] args) {
         char[] letters = {'c', 'd', 'f'};
-        char target = 'd';
+        char target = 'b';
         System.out.println(getCeil(letters, target));
     }
 
