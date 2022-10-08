@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/arrays/exercises/easy/array-concatenation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/arrays/exercises/easy/build-array-from-permutation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/arrays/exercises/easy/kids-with-greatest-number-of-candies" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/arrays/exercises/easy/number-of-good-pairs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/arrays/exercises/easy/numbers-smaller-than-current" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/arrays/exercises/easy/numbers-with-even-number-of-digits" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/arrays/exercises/easy/richest-customer-wealth" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/arrays/exercises/easy/running-sum-1d-array" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/arrays/exercises/easy/shuffle-the-array" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
