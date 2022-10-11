@@ -4,7 +4,24 @@ import java.util.ArrayList;
 
 public class DFS_Traversal {
     public static void main(String[] args) {
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        for(int i = 1; i <= 8; i++) {
+            adj.add(new ArrayList<>());
+        }
 
+        addEdge(adj, 1, 2);
+        addEdge(adj, 2, 3);
+        addEdge(adj, 2, 7);
+        addEdge(adj, 3, 5);
+        addEdge(adj, 4, 6);
+        addEdge(adj, 5, 7);
+
+        System.out.println(dfsOnGraph(7,adj));
+    }
+
+    static void addEdge(ArrayList<ArrayList<Integer>> list, int s, int d) {
+        list.get(s).add(d);
+        list.get(d).add(s);
     }
 
     static void dfs(int node, boolean[] vis, ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> res) {
