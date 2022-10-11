@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class InfixToPostfix {
     public static void main(String[] args) {
-        System.out.println(convert("A+B*C+D"));
+        System.out.println(convert("4+3*(6*3-12)"));
     }
 
     static int Prec(char ch) {
@@ -23,7 +23,7 @@ public class InfixToPostfix {
         Stack<Character> stk = new Stack<>();
 
         for(int i = 0; i < s.length(); i++) {
-            if(Character.isAlphabetic(s.charAt(i))) {
+            if(Character.isAlphabetic(s.charAt(i)) || Character.isDigit(s.charAt(i))) {
                 postfix.append(s.charAt(i));
             }
             else if(s.charAt(i) == '(') {
