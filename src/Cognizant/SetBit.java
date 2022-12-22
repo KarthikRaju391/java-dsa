@@ -1,6 +1,6 @@
 package Cognizant;
 
-public class LeastDiscount {
+public class SetBit {
     public static void main(String[] args) {
         int res = countSetBit(2);
         System.out.println(res);

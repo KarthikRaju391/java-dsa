@@ -3,8 +3,9 @@ package Stacks;
 import java.util.Stack;
 
 public class InfixToPostfix {
+    //4+3*(6*3-12)
     public static void main(String[] args) {
-        System.out.println(convert("4+3*(6*3-12)"));
+        System.out.println(convert("4+5/7+9-3"));
     }
 
     static int Prec(char ch) {

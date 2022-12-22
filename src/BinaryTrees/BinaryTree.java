@@ -21,20 +21,19 @@ public class BinaryTree {
         tree.root.right = new TreeNode(3);
         tree.root.left.left = new TreeNode(4);
         tree.root.left.right = new TreeNode(5);
-        tree.root.left.right.left = new TreeNode(6);
-        tree.root.right.left = new TreeNode(7);
-        tree.root.right.right = new TreeNode(8);
-        tree.root.right.right.left = new TreeNode(9);
-        tree.root.right.right.right = new TreeNode(10);
+        tree.root.right.left = new TreeNode(6);
+        tree.root.right.right = new TreeNode(7);
+
 
 //        tree.traverseTree(tree.root);
 //        System.out.println(levelOrder(tree.root));
+        System.out.println(zigZagTraversal(tree.root));
 //        System.out.println(preOrderIterative(tree.root));
-        MaxDepth md = new MaxDepth();
+//        MaxDepth md = new MaxDepth();
 //        System.out.println(md.findMaxDepth(tree.root));
-        int[] diameter = new int[1];
-        md.getDiameter(tree.root, diameter);
-        System.out.println(diameter[0]);
+//        int[] diameter = new int[1];
+//        md.getDiameter(tree.root, diameter);
+//        System.out.println(diameter[0]);
 //        System.out.println(inorderIterative(tree.root));
 
     }
@@ -142,6 +141,36 @@ public class BinaryTree {
 
                 subList.add(queue.poll().val);
             }
+            wrapList.add(subList);
+        }
+        return wrapList;
+    }
+
+    static List<List<Integer>> zigZagTraversal(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> wrapList = new LinkedList<>();
+        if(root == null) {
+            return wrapList;
+        }
+        queue.offer(root);
+        boolean flag = true;
+
+        while(!queue.isEmpty()) {
+            LinkedList<Integer> subList = new LinkedList<>();
+            int size = queue.size();
+
+            for(int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                if(node.left != null) queue.add(node.left);
+                if(node.right != null) queue.add(node.right);
+
+                if(flag) {
+                    subList.addFirst(node.val);
+                } else {
+                    subList.addLast(node.val);
+                }
+            }
+            flag = !flag;
             wrapList.add(subList);
         }
         return wrapList;

@@ -2,7 +2,8 @@ package arrays;
 
 public class MaxSubArrayProduct {
     public static void main(String[] args) {
-
+        int[] arr = {-1, 6, 2, 0, 7, 9};
+        System.out.println(findMaxProduct(arr));
     }
 
     static int findMaxProduct(int[] arr) {

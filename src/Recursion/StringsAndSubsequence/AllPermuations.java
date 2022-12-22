@@ -1,6 +1,7 @@
 package Recursion.StringsAndSubsequence;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class AllPermuations {
@@ -38,6 +39,7 @@ public class AllPermuations {
             ans.add(new ArrayList<>(ds));
             return;
         }
+
 
         for(int i = index; i < arr.length; i++) {
             swap(i, index, arr);

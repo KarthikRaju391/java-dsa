@@ -26,7 +26,7 @@ public class MaxDepth {
             return -1;
         }
 
-        return Math.max(lh, rh);
+        return Math.max(lh, rh) + 1;
     }
 
     public int getDiameter(TreeNode root, int[] diameter) {

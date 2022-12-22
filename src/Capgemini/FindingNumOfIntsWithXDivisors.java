@@ -7,9 +7,9 @@ public class FindingNumOfIntsWithXDivisors {
 
     static int check(int n, int x) {
         int count = 0;
-        for(int i = 1; i <= n; i++) {
-            int count_factors = 0;
-            for(int j = 1; j <= i; j++) {
+        for(int i = 1; i <= n; i++) { // i -> 1, 2
+            int count_factors = 0; // c -> 0
+            for(int j = 1; j <= i; j++) { // j -> 1, i -> 1, 2
                 if(i % j == 0) {
                     count_factors++;
                 }

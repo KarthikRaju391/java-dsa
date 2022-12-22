@@ -2,12 +2,11 @@ package BinarySearch;
 
 public class MedianOfSortedArrays {
     public static void main(String[] args) {
-       int[] arr1 = {2, 6, 7};
-       int[] arr2 = {4, 5};
+       int[] arr1 = {1, 2, 3};
+       int[] arr2 = {4, 5, 6};
 
         System.out.println(findMedianSortedArrays(arr1, arr2));
     }
-
     static double findMedianSortedArrays(int[] arr1, int[] arr2) {
         if(arr2.length < arr1.length) return findMedianSortedArrays(arr2, arr1);
 

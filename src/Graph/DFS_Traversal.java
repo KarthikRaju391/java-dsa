@@ -16,7 +16,8 @@ public class DFS_Traversal {
         addEdge(adj, 4, 6);
         addEdge(adj, 5, 7);
 
-        System.out.println(dfsOnGraph(7,adj));
+//        System.out.println(dfsOnGraph(7,adj));
+        System.out.println(numberOfProvinces(7, adj));
     }
 
     static void addEdge(ArrayList<ArrayList<Integer>> list, int s, int d) {
@@ -44,5 +45,18 @@ public class DFS_Traversal {
             }
         }
         return res;
+    }
+
+    static int numberOfProvinces(int V, ArrayList<ArrayList<Integer>> adj) {
+        ArrayList<Integer> res = new ArrayList<>();
+        int count = 0;
+        boolean[] vis = new boolean[V + 1];
+        for(int i = 1; i <= V; i++) {
+            if(!vis[i]) {
+                count++;
+                dfs(i, vis, adj, res);
+            }
+        }
+        return count;
     }
 }
