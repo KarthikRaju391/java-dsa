@@ -44,6 +44,12 @@ public class VerticalOrderTraversal {
             TreeNode node = t.node;
             int y = t.col;
 
+            // This is the important part. Why?
+            // by letting the map be updated for all the nodes present in a given vertical order,
+            // in the end, when all the nodes are traversed, we will only have the last nodes of
+            // a given vertical order which provides us the bottom view of the binary tree.
+            // By simply letting the map update the values and not update the values. We get the
+            // Bottom view and the Top View of a binary tree respectively.
             map.put(y, node.val);
 
             if(node.left != null) {
@@ -60,6 +66,9 @@ public class VerticalOrderTraversal {
     static List<Integer> getTopView(TreeNode root) {
         // we just need the vertical level of the nodes
         // use a TreeMap where the key is the level and the value is the node value
+        // Why are we using a TreeMap?
+        // ANS: Well, because we need to maintain order while reading values from it.
+        // We need an ordered HashMap and the ordering feature is provided by the TreeMap!
         TreeMap<Integer, Integer> map = new TreeMap<>();
         // use a Queue which contains a pair of vertical level and the node
         Queue<Tuple> q = new LinkedList<>();
@@ -71,6 +80,10 @@ public class VerticalOrderTraversal {
             TreeNode node = t.node;
             int y = t.col;
 
+            // This is the most important part. Why?
+            // Because, we are putting the values to the map only once for a given vertical
+            // order. That means, we are adding only the first node of a given vertical order
+            // which provides the top view of the binary tree!
             if(!map.containsKey(y)) {
                 map.put(y, node.val);
             }
